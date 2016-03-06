@@ -1,0 +1,7 @@
+name: dogma_union_type
+version: 0.0.1
+description: Union type support for the Dogma libraries.
+author: Don Olmstead <don.j.olmstead@gmail.com>
+homepage: http://dogma-dart.github.io/
+environment:
+  sdk: '>=1.14.0-any <2.0.0'
