@@ -35,7 +35,7 @@ class UnionType {
   //---------------------------------------------------------------------
 
   /// The types that the annotated value could be.
-  final List<Type> types;
+  final List types;
 
   //---------------------------------------------------------------------
   // Construction
@@ -43,5 +43,13 @@ class UnionType {
 
   /// Creates an instance of [UnionType] which is the union of the given
   /// [types].
-  const UnionType(this.types);
+  const UnionType(List<Type> types)
+      : types = types;
+
+  /// Creates an instance of [UnionType] which is the union of the given
+  /// [types].
+  ///
+  /// Used internally by dogma_source_analyzer to instantiate instances as the
+  /// analyzer cannot create instances of [Type].
+  const UnionType._(this.types);
 }
